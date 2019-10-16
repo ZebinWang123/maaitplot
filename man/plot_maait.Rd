@@ -2,12 +2,12 @@
 % Please edit documentation in R/plot_maait.R
 \name{plot_maait}
 \alias{plot_maait}
-\title{Plot Candy Popularity}
+\title{Plot MAAIT variables}
 \usage{
 plot_maait(df, x_axis_var, y_axis_var)
 }
 \arguments{
-\item{df}{a dataframe containing the maait data}
+\item{df}{a dataframe containing the MAAIT data}
 
 \item{x_axis_var}{the name of the column in \code{df} that specifies the name of the x-axis variable}
 
