@@ -15,14 +15,6 @@
 
 plot_maait = function(df, x_axis_var, y_axis_var){
 
-  if(!(grepl(pattern = "sxs*", x = x_axis_var) |  grepl(pattern = "preFEVpp", x = x_axis_var) | grepl(pattern = "preFEVPVC", x = x_axis_var) | grepl(pattern = "dmouseb*", x = x_axis_var) | grepl(pattern = "dmousef*", x = x_axis_var) | grepl(pattern = "airmouse*", x = x_axis_var))){
-    return("Please input variables related to Symptom outcomes, Lung function outcomes, Mouse allergen in the child's bed, Mouse allergen on the bedroom floor or Mouse allergen in the air")
-  }
-
-  if(!(grepl(pattern = "sxs*", x = y_axis_var) |  grepl(pattern = "preFEVpp", x = y_axis_var) | grepl(pattern = "preFEVPVC", x = y_axis_var) | grepl(pattern = "dmouseb*", x = y_axis_var) | grepl(pattern = "dmousef*", x = y_axis_var) | grepl(pattern = "airmouse*", x = y_axis_var))){
-    return("Please input variables related to Symptom outcomes, Lung function outcomes, Mouse allergen in the child's bed, Mouse allergen on the bedroom floor or Mouse allergen in the air")
-  }
-
   p <- ggplot(data = df, aes(x = df[,x_axis_var], y = df[,y_axis_var])) +
     geom_point() +
     geom_smooth(method = "gam", formula = y ~ s(x)) +
